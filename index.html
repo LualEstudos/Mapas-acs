@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mapas mentais em PDF para concurso de Agente Comunitário de Saúde.">
-  <title>Mapas Mentais ACS | Estude com Mais Clareza</title>
+  <meta name="description" content="Mapas mentais, cronogramas e materiais digitais para diferentes concursos públicos.">
+  <title>Lual Estudos | Materiais para Concursos</title>
   <style>
     :root{
       --primary:#6746e8;
@@ -209,12 +209,48 @@
     .final-price{font-size:2.8rem;font-weight:950;margin-bottom:18px}
     .final-cta .btn{font-size:1.08rem;padding:17px 28px}
 
-    footer{background:#1d173a;color:#aaa4c7;text-align:center;padding:28px 15px;font-size:.87rem}
+    footer{background:#1d173a;color:#aaa4c7;padding:48px 0 26px;font-size:.9rem}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:35px;text-align:left}
+    .footer-brand{display:flex;align-items:center;gap:10px;color:#fff;font-size:1.2rem;font-weight:950;margin-bottom:13px}
+    .footer-brand .brand-mark{width:39px;height:39px;border-radius:13px}
+    .footer-text{max-width:430px;color:#b7b1ca}
+    .footer-title{color:#fff;font-size:1rem;margin-bottom:12px}
+    .footer-links{display:grid;gap:9px}
+    .footer-links a{color:#aaa4c7}
+    .footer-links a:hover{color:#fff}
+    .footer-contact{display:grid;gap:9px;color:#aaa4c7}
+    .footer-copy{border-top:1px solid #3b315c;margin-top:34px;padding-top:21px;text-align:center;color:#8f89a8;font-size:.84rem}
 
     .floating-buy{
       position:fixed;bottom:18px;right:18px;z-index:45;background:var(--accent);color:#fff;
       padding:14px 18px;border-radius:999px;font-weight:950;box-shadow:0 13px 30px rgba(21,128,61,.3)
     }
+
+
+    .contest-section{background:#fff}
+    .contest-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:28px}
+    .contest-tab{border:1px solid var(--line);background:#fff;color:#55536a;border-radius:999px;padding:10px 15px;font-weight:900;cursor:pointer;transition:.2s}
+    .contest-tab.active,.contest-tab:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .contest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .contest-card{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 10px 28px rgba(55,38,128,.08);display:flex;flex-direction:column}
+    .contest-cover{min-height:170px;padding:22px;color:#fff;display:flex;align-items:flex-end;position:relative}
+    .contest-cover h3{font-size:1.55rem;line-height:1.08}
+    .contest-cover:after{content:"PDF";position:absolute;top:15px;right:15px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);padding:5px 8px;border-radius:8px;font-size:.72rem;font-weight:900}
+    .contest-health{background:linear-gradient(135deg,#188b56,#52c48b)}
+    .contest-education{background:linear-gradient(135deg,#6c4df6,#a487ff)}
+    .contest-nursing{background:linear-gradient(135deg,#d94f88,#ff91bc)}
+    .contest-fire{background:linear-gradient(135deg,#d85b20,#ff9a52)}
+    .contest-admin{background:linear-gradient(135deg,#2775e6,#62b4ff)}
+    .contest-security{background:linear-gradient(135deg,#263b6e,#667bb1)}
+    .contest-body{padding:20px;display:flex;flex-direction:column;flex:1}
+    .contest-badge{display:inline-flex;align-self:flex-start;background:#eee9ff;color:var(--primary-dark);border-radius:999px;padding:5px 9px;font-size:.75rem;font-weight:900;margin-bottom:9px}
+    .contest-body p{color:var(--muted);font-size:.93rem;margin-bottom:16px}
+    .contest-list{display:grid;gap:7px;color:#5e5b6d;font-size:.9rem;margin-bottom:18px}
+    .contest-list span:before{content:"✓ ";color:#1f9d62;font-weight:950}
+    .contest-card .btn{margin-top:auto}
+    .coming-soon{opacity:.86}
+    @media(max-width:900px){.contest-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:650px){.contest-grid{grid-template-columns:1fr}}
 
     @media(max-width:900px){
       .nav-links{display:none}
@@ -235,6 +271,9 @@
       .highlight{padding:32px 21px}
       .floating-buy{left:14px;right:14px;text-align:center}
       body{padding-bottom:65px}
+      .footer-grid{grid-template-columns:1fr;text-align:center}
+      .footer-text{margin:auto}
+      .footer-brand{justify-content:center}
     }
   </style>
 </head>
@@ -247,13 +286,15 @@
     <nav>
       <a href="#" class="brand">
         <span class="brand-mark">✓</span>
-        <span>Aprova Mapas</span>
+        <span>Lual Estudos</span>
       </a>
       <div class="nav-links">
-        <a href="#beneficios">Benefícios</a>
-        <a href="#conteudo">Conteúdo</a>
+        <a href="#inicio">Início</a>
+        <a href="#concursos">Concursos</a>
+        <a href="#conteudo">Materiais</a>
         <a href="#depoimentos">Avaliações</a>
         <a href="#duvidas">Dúvidas</a>
+        <a href="#contato">Contato</a>
       </div>
       <a class="mini-btn checkout-link" href="#" target="_blank">Comprar agora</a>
     </nav>
@@ -261,15 +302,15 @@
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero" id="inicio">
     <div class="container hero-grid">
       <div>
-        <span class="eyebrow">✨ Preparação visual para concursos de ACS</span>
-        <h1>Estude para ACS com <span>mais clareza e menos confusão</span></h1>
-        <p>Mapas mentais em PDF, coloridos e organizados, para ajudar você a compreender, memorizar e revisar os principais assuntos cobrados nas provas de Agente Comunitário de Saúde.</p>
+        <span class="eyebrow">✨ Materiais visuais para concursos públicos</span>
+        <h1>Estude com <span>mais clareza e menos confusão</span></h1>
+        <p>Mapas mentais, cronogramas e materiais digitais organizados para ajudar você a compreender, memorizar e revisar os principais assuntos cobrados em diferentes concursos públicos.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary checkout-link" href="#" target="_blank">Quero acessar o material</a>
-          <a class="btn btn-secondary" href="#conteudo">Ver o conteúdo</a>
+          <a class="btn btn-primary checkout-link" href="#" target="_blank">Conhecer os materiais</a>
+          <a class="btn btn-secondary" href="#concursos">Escolher meu concurso</a>
         </div>
         <div class="trust">
           <span>✓ Arquivo em PDF</span>
@@ -291,6 +332,61 @@
         </div>
         <div class="float-card fc1">⭐ Estudo organizado</div>
         <div class="float-card fc2">📱 Acesse onde quiser</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contest-section" id="concursos">
+    <div class="container">
+      <div class="section-head">
+        <h2>Materiais para diferentes concursos</h2>
+        <p>O material de Agente Comunitário de Saúde já está disponível. As demais áreas ficam preparadas para os próximos lançamentos.</p>
+      </div>
+
+      <div class="contest-tabs">
+        <button class="contest-tab active" data-contest-filter="todos">Todos</button>
+        <button class="contest-tab" data-contest-filter="saude">Saúde</button>
+        <button class="contest-tab" data-contest-filter="educacao">Educação</button>
+        <button class="contest-tab" data-contest-filter="administrativo">Administrativo</button>
+        <button class="contest-tab" data-contest-filter="seguranca">Segurança</button>
+      </div>
+
+      <div class="contest-grid">
+        <article class="contest-card" data-contest-category="saude">
+          <div class="contest-cover contest-health"><h3>Agente Comunitário de Saúde</h3></div>
+          <div class="contest-body">
+            <span class="contest-badge">Disponível</span>
+            <p>Mapas mentais coloridos e organizados para concursos e processos seletivos de ACS.</p>
+            <div class="contest-list"><span>SUS e legislação</span><span>ESF e atribuições do ACS</span><span>Territorialização</span><span>Visita domiciliar</span><span>Extra: cronograma de 30 dias</span></div>
+            <a class="btn btn-primary" href="#conteudo">Ver material de ACS</a>
+          </div>
+        </article>
+
+        <article class="contest-card coming-soon" data-contest-category="educacao">
+          <div class="contest-cover contest-education"><h3>Pedagogia</h3></div>
+          <div class="contest-body"><span class="contest-badge">Em breve</span><p>Materiais para professores, auxiliares e demais cargos da educação.</p><div class="contest-list"><span>LDB</span><span>BNCC</span><span>ECA</span><span>Didática e avaliação</span></div><span class="btn btn-secondary">Próximo lançamento</span></div>
+        </article>
+
+        <article class="contest-card coming-soon" data-contest-category="saude">
+          <div class="contest-cover contest-nursing"><h3>Enfermagem</h3></div>
+          <div class="contest-body"><span class="contest-badge">Em breve</span><p>Conteúdo para concursos de técnicos, auxiliares e enfermeiros.</p><div class="contest-list"><span>SUS</span><span>Saúde pública</span><span>Procedimentos</span><span>Ética profissional</span></div><span class="btn btn-secondary">Próximo lançamento</span></div>
+        </article>
+
+        <article class="contest-card coming-soon" data-contest-category="seguranca">
+          <div class="contest-cover contest-fire"><h3>Bombeiro Civil e Militar</h3></div>
+          <div class="contest-body"><span class="contest-badge">Em breve</span><p>Preparação teórica para seleções e concursos da área de emergência e segurança.</p><div class="contest-list"><span>Primeiros socorros</span><span>Prevenção e combate a incêndios</span><span>Legislação</span><span>Segurança</span></div><span class="btn btn-secondary">Próximo lançamento</span></div>
+        </article>
+
+        <article class="contest-card coming-soon" data-contest-category="administrativo">
+          <div class="contest-cover contest-admin"><h3>Área Administrativa</h3></div>
+          <div class="contest-body"><span class="contest-badge">Em breve</span><p>Base de estudos para auxiliares, assistentes e cargos administrativos.</p><div class="contest-list"><span>Português</span><span>Informática</span><span>Atendimento ao público</span><span>Administração pública</span></div><span class="btn btn-secondary">Próximo lançamento</span></div>
+        </article>
+
+        <article class="contest-card coming-soon" data-contest-category="seguranca">
+          <div class="contest-cover contest-security"><h3>Segurança Pública</h3></div>
+          <div class="contest-body"><span class="contest-badge">Em breve</span><p>Materiais para carreiras de segurança, guarda municipal e áreas relacionadas.</p><div class="contest-list"><span>Legislação</span><span>Direitos humanos</span><span>Conhecimentos gerais</span><span>Preparação teórica</span></div><span class="btn btn-secondary">Próximo lançamento</span></div>
+        </article>
       </div>
     </div>
   </section>
@@ -330,7 +426,7 @@
         <article class="card">
           <div class="card-icon">🎯</div>
           <h3>Foco na prova</h3>
-          <p>Material direcionado para a preparação de concursos e processos seletivos de ACS.</p>
+          <p>Materiais direcionados para a preparação de diferentes concursos e processos seletivos.</p>
         </article>
       </div>
     </div>
@@ -511,16 +607,34 @@
 
   <section class="final-cta">
     <div class="container">
-      <h2>Comece agora sua preparação para o concurso de ACS</h2>
-      <p>Tenha mapas mentais organizados para estudar e revisar os assuntos mais importantes da sua prova.</p>
+      <h2>Comece agora sua preparação com mais organização</h2>
+      <p>O material de Agente Comunitário de Saúde já está disponível, e novas áreas serão adicionadas à Lual Estudos.</p>
       <div class="final-price">R$ 24,90</div>
       <a class="btn btn-primary checkout-link" href="#" target="_blank">Quero comprar pela Cakto</a>
     </div>
   </section>
 </main>
 
-<footer>
-  © 2026 Aprova Mapas. Produto digital para uso pessoal. Este material não possui vínculo com órgãos públicos ou bancas organizadoras.
+<footer id="contato">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="brand-mark">✓</span><span>Lual Estudos</span></div>
+        <p class="footer-text">Transformando conteúdos difíceis em materiais simples, organizados e fáceis de memorizar. Mapas mentais e cronogramas para diferentes áreas de concursos.</p>
+      </div>
+      <div>
+        <h3 class="footer-title">Navegação</h3>
+        <div class="footer-links">
+          <a href="#inicio">Início</a><a href="#concursos">Concursos</a><a href="#beneficios">Benefícios</a><a href="#depoimentos">Avaliações</a><a href="#duvidas">Perguntas frequentes</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-title">Atendimento e informações</h3>
+        <div class="footer-contact"><span>📩 Atendimento digital</span><span>📚 Produto em PDF</span><span>🔒 Pagamento processado pela Cakto</span><span>📱 Acesso pelo celular ou computador</span></div>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 Lual Estudos. Todos os direitos reservados. Os materiais não possuem vínculo com órgãos públicos ou bancas organizadoras.</div>
+  </div>
 </footer>
 
 <a class="floating-buy checkout-link" href="#" target="_blank">Comprar por R$ 24,90</a>
@@ -531,6 +645,19 @@
     Exemplo: const CHECKOUT_CAKTO = "https://pay.cakto.com.br/SEU-LINK";
   */
   const CHECKOUT_CAKTO = "COLE_AQUI_SEU_LINK_DA_CAKTO";
+
+
+
+    document.querySelectorAll('.contest-tab').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.contest-tab').forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.dataset.contestFilter;
+        document.querySelectorAll('.contest-card').forEach(card => {
+          card.style.display = filter === 'todos' || card.dataset.contestCategory === filter ? 'flex' : 'none';
+        });
+      });
+    });
 
   document.querySelectorAll(".checkout-link").forEach(link => {
     link.href = CHECKOUT_CAKTO;
